@@ -13,8 +13,18 @@ int sumList(vector<int> data) {
 	return sum;
 }
 
+int productList(vector<int> data) {
+	// Multiply all the numbers in an array
+	int product = 1;
+	for (int i = 0; i < data.size(); i++) {
+		product *= data.at(i);
+	}
+	return product;
+}
+
 int main()
 {
+
 	vector <int> data;
 	data.push_back(5);
 	data.push_back(7);
@@ -23,7 +33,9 @@ int main()
 	data.push_back(3);
 
 	int sum = sumList(data);
+	int product = productList(data);
 
-	cout << sum << endl;
+	cout << "Sum of the list: " << sum << endl;
+	cout << "Product of the list: " << product << endl;
 
 }
