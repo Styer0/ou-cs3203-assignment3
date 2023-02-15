@@ -24,14 +24,20 @@ int productList(vector<int> data) {
 
 int main()
 {
-
 	vector <int> data;
-	data.push_back(5);
-	data.push_back(7);
-	data.push_back(4);
-	data.push_back(9);
-	data.push_back(3);
+	//data.push_back(5);
+	//data.push_back(7);
+	//data.push_back(4);
+	//data.push_back(9);
+	//data.push_back(3);
+	int input;
+	
+	// User input
+	while (cin >> input) {
+		data.push_back(input);
+	}
 
+	// Call function
 	int sum = sumList(data);
 	int product = productList(data);
 
