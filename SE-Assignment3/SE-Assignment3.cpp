@@ -52,4 +52,8 @@ int main()
 	cout << "Sum of the list: " << sum << endl;
 	cout << "Product of the list: " << product << endl;
 
+	for (int i = 0; i < reverseData.size(); i++) {
+		cout << reverseData.at(i) << " ";
+	}
+	cout << endl;
 }
