@@ -22,6 +22,14 @@ int productList(vector<int> data) {
 	return product;
 }
 
+vector<int> reversal(vector<int> data) {
+	// reversing the order from the array
+	vector<int> reverse;
+	for (int i = data.size() - 1; i >= 0; --i) {
+		reverse.push_back(data.at(i));
+	}
+	return reverse;
+}
 int main()
 {
 	vector <int> data;
@@ -36,8 +44,8 @@ int main()
 	while (cin >> input) {
 		data.push_back(input);
 	}
-
 	// Call function
+	vector<int> reverseData = reversal(data);
 	int sum = sumList(data);
 	int product = productList(data);
 
