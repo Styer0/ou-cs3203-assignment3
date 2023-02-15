@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 int sumList(vector<int> data) {
-	// Add all of the numbers in an array
+	// (1) Add all of the numbers in an array
 	int sum = 0;
 	for (int i = 0; i < data.size(); i++) {
 		sum += data.at(i);
@@ -14,7 +14,7 @@ int sumList(vector<int> data) {
 }
 
 int productList(vector<int> data) {
-	// Multiply all the numbers in an array
+	// (2) Multiply all the numbers in an array
 	int product = 1;
 	for (int i = 0; i < data.size(); i++) {
 		product *= data.at(i);
@@ -23,7 +23,7 @@ int productList(vector<int> data) {
 }
 
 vector<int> reversal(vector<int> data) {
-	// reversing the order from the array
+	// (5) reversing the order from the array
 	vector<int> reverse;
 	for (int i = data.size() - 1; i >= 0; --i) {
 		reverse.push_back(data.at(i));
@@ -32,26 +32,24 @@ vector<int> reversal(vector<int> data) {
 }
 int main()
 {
+	// Main function
 	vector <int> data;
-	//data.push_back(5);
-	//data.push_back(7);
-	//data.push_back(4);
-	//data.push_back(9);
-	//data.push_back(3);
 	int input;
 	
 	// User input
 	while (cin >> input) {
 		data.push_back(input);
 	}
-	// Call function
-	vector<int> reverseData = reversal(data);
+	// Call functions
 	int sum = sumList(data);
 	int product = productList(data);
+	vector<int> reverseData = reversal(data);
 
+	// print out to console
 	cout << "Sum of the list: " << sum << endl;
 	cout << "Product of the list: " << product << endl;
 
+	// (6) print out array
 	for (int i = 0; i < reverseData.size(); i++) {
 		cout << reverseData.at(i) << " ";
 	}
